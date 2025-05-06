@@ -1,0 +1,42 @@
+.catalog {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog > h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.items {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0;
+}
+
+.itemLarge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 200px;
+    border-radius: 32px;
+}
+
+.itemSmall {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 200px;
+    border-radius: 32px;
+}
+
+
