@@ -5,6 +5,13 @@
     overflow: hidden;
     padding: 5px;
     border: 2px solid rgb(253, 109, 7);
+    transition: all 0.2s linear;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: all 0.2s linear;
 }
 
 .link {

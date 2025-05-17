@@ -1,12 +1,12 @@
 import styles from './styles.module.css';
-import logo from '../../images/logo.png';
-import vk from '../../images/vk.png';
-import telegram from '../../images/telegram.jpg';
-import youtube from '../../images/youtube.png';
-import ok from '../../images/Odnoklassniki.png';
-import appStore from '../../images/appstore.png';
-import googlePlay from '../../images/googlePlay.png';
-import rustore from '../../images/rustore.png';
+import logo from '../../images/UI/logo.png';
+import vk from '../../images/social/vk.png';
+import telegram from '../../images/social/telegram.jpg';
+import youtube from '../../images/social/youtube.png';
+import ok from '../../images/social/Odnoklassniki.png';
+import appStore from '../../images/apps/appstore.png';
+import googlePlay from '../../images/apps/googlePlay.png';
+import rustore from '../../images/apps/rustore.png';
 
 const Footer = () => {
     return (

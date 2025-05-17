@@ -11,7 +11,7 @@ const MenuButton = ({onClick}) => {
                 <div className={styles.line}></div>
                 <div className={styles.line}></div>
             </div>
-            <p className={styles.text}>Каталог</p>
+            <p className={styles.text}>Меню</p>
         </div>
      );
 }
