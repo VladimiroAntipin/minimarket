@@ -1,18 +1,18 @@
 import ProductCard from '../ProductCard/ProductCard';
 import styles from './styles.module.css';
+import { ProductsList } from '../../utils/ProductsList';
 
-const ProductCategory = ({ title, backgroundColor, textColor }) => {
+const ProductCategory = ({ title, backgroundColor, textColor, category, onAddToCart }) => {
+    const products = ProductsList.filter(product => product.category === category);
     return (
         <div className={styles.productCategory}>
             <div className={`${styles.titleContainer} ${backgroundColor ? styles[backgroundColor] : ''}`}>
                 <h2 className={`${styles.title} ${textColor ? styles[textColor] : ''}`}>{title}</h2>
             </div>
             <div className={styles.cardsContainer}>
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                {products.map(product => (
+                    <ProductCard key={product.id} product={product} onAddToCart={onAddToCart} />
+                ))}
             </div>
         </div>
     );

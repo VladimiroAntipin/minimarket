@@ -1,5 +1,5 @@
 import styles from './styles.module.css';
-import delivery from '../../images/delivery.svg';
+import delivery from '../../images/UI/delivery.svg';
 
 const NavBar = () => {
     return ( 

@@ -1,18 +1,17 @@
 import styles from './styles.module.css';
-import image from '../../images/fish.jpeg'
 
-const ProductCard = () => {
+const ProductCard = ({product, onAddToCart}) => {
     return ( 
         <div className={styles.card}>
             <div className={styles.image}>
-                <img src={image} alt='' />
+                <img src={product.image} alt={'product'} />
             </div>
             <div className={styles.container}>
-                <p className={styles.name}>Product Name</p>
-                <p className={styles.price}>100,<span>90</span> руб</p>
+                <p className={styles.name}>{product.name}</p>
+                <p className={styles.price}>{product.price},<span>{product.cents}</span> руб</p>
             </div>
 
-            <div className={styles.button}>+</div>
+            <div className={styles.button} onClick={() => onAddToCart(product)}>+</div>
         </div>
      );
 }

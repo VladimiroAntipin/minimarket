@@ -1,15 +1,15 @@
 import CatalogItem from '../CatalogItem/CatalogItem';
 import styles from './styles.module.css';
-import bird from '../../images/bird.jpeg';
-import bread from '../../images/bread.jpg';
-import cheese from '../../images/cheese.jpeg';
-import discount from '../../images/discount2.jpeg';
-import fish from '../../images/fish.jpeg';
-import food from '../../images/food.jpg';
-import fruit from '../../images/fruits.jpg';
-import meat from '../../images/meat.jpg';
-import milk from '../../images/milk.jpg';
-import salad from '../../images/salad.jpg';
+import bird from '../../images/catalog/bird.jpeg';
+import bread from '../../images/catalog/bread.jpg';
+import cheese from '../../images/catalog/cheese.jpeg';
+import discount from '../../images/catalog/discount2.jpeg';
+import fish from '../../images/catalog/fish.jpeg';
+import food from '../../images/catalog/food.jpg';
+import fruit from '../../images/catalog/fruits.jpg';
+import meat from '../../images/catalog/meat.jpg';
+import milk from '../../images/catalog/milk.jpg';
+import salad from '../../images/catalog/salad.jpg';
 
 const Catalog = () => {
     return ( 

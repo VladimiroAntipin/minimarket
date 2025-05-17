@@ -1,11 +1,11 @@
 import Carousel from '../Carousel/Carousel';
 import PromoCard from '../PromoCard/PromoCard';
 import styles from './styles.module.css';
-import discount from '../../images/discount.jpeg';
-import cashback from '../../images/cashback.avif';
-import coupon from '../../images/coupon.webp';
-import sticker from '../../images/sticker.avif';
-import favourite from '../../images/favourite.png';
+import discount from '../../images/promo/discount.jpeg';
+import cashback from '../../images/promo/cashback.avif';
+import coupon from '../../images/promo/coupon.webp';
+import sticker from '../../images/promo/sticker.avif';
+import favourite from '../../images/promo/favourite.png';
 
 const Promo = () => {
     return (
