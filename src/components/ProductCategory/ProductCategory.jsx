@@ -2,7 +2,7 @@ import ProductCard from '../ProductCard/ProductCard';
 import styles from './styles.module.css';
 import { ProductsList } from '../../utils/ProductsList';
 
-const ProductCategory = ({ title, backgroundColor, textColor, category, onAddToCart }) => {
+const ProductCategory = ({ title, backgroundColor, textColor, category, onAddToCart, onMoreClick }) => {
     const products = ProductsList.filter(product => product.category === category);
     return (
         <div className={styles.productCategory}>
@@ -11,7 +11,7 @@ const ProductCategory = ({ title, backgroundColor, textColor, category, onAddToC
             </div>
             <div className={styles.cardsContainer}>
                 {products.map(product => (
-                    <ProductCard key={product.id} product={product} onAddToCart={onAddToCart} />
+                    <ProductCard key={product.id} product={product} onAddToCart={onAddToCart} onMoreClick={(product) => onMoreClick(product)} />
                 ))}
             </div>
         </div>

@@ -9,11 +9,14 @@ import AuthModal from './components/AuthModal/AuthModal';
 import { useState } from 'react';
 import Cart from './components/Cart/Cart';
 import Menu from './components/Menu/Menu';
+import ProductModal from './components/ProductModal/ProductModal';
 
 function App() {
   const [openAuthModal, setOpenAuthModal] = useState(false);
   const [openCart, setOpenCart] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
+  const [openProductModal, setOpenProductModal] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const [cartItems, setCartItems] = useState([]);
 
   const handleOpenAuthModal = () => {
@@ -38,6 +41,16 @@ function App() {
 
   const handleCloseMenu = () => {
     setOpenMenu(false);
+  }
+
+  const handleOpenProductModal = (product) => {
+    setSelectedProduct(product)
+    setOpenProductModal(true);
+  }
+
+  const handleCloseProductModal = () => {
+    setOpenProductModal(false);
+    setSelectedProduct(null);
   }
 
   const handleAddToCart = (product) => {
@@ -70,17 +83,23 @@ function App() {
         <Promo />
         <Reels />
         <Catalog />
-        <Products onAddToCart={handleAddToCart} />
+        <Products onAddToCart={handleAddToCart} onMoreClick={handleOpenProductModal} />
       </div>
       <Footer />
       {openAuthModal && <AuthModal onClose={handleCloseAuthModal} />}
-      {openMenu && <Menu onClose={handleCloseMenu}/>}
+      {openMenu && <Menu onClose={handleCloseMenu} />}
       {openCart &&
         <Cart
           onClose={handleCloseCart}
           cartItems={cartItems}
           onClearCart={handleClearCart}
           handleUpdateCart={handleUpdateCart}
+        />}
+      {openProductModal && selectedProduct &&
+        <ProductModal
+          product={selectedProduct}
+          onClose={handleCloseProductModal}
+          onAddToCart={() => handleAddToCart(selectedProduct)}
         />}
     </div>
   );
