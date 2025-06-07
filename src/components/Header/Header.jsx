@@ -26,9 +26,9 @@ const Header = ({ onOpenAuthModal, onOpenCart, cartItems, onOpenMenu }) => {
             <div className={styles.content}>
 
                 <div className={styles.wrapper}>
-                    <div className={styles.logo}>
+                    <a className={styles.logo} href='/'>
                         <img src={logo} alt="logo" />
-                    </div>
+                    </a>
                     <MenuButton onClick={handleClickMenuButton}/>
                 </div>
 

@@ -1,13 +1,13 @@
-import meat1 from '../images/products/meat1.webp';
-import meat2 from '../images/products/meat-2.webp';
-import meat3 from '../images/products/meat-3.webp';
-import meat4 from '../images/products/meat-4.webp';
-import meat5 from '../images/products/meat-5.webp';
-import milk1 from '../images/products/milk-1.webp';
-import milk2 from '../images/products/milk-2.webp';
-import milk3 from '../images/products/milk-3.webp';
-import milk4 from '../images/products/milk-4.webp';
-import milk5 from '../images/products/milk-5.webp';
+import meat1 from '../images/products/popular/meat1.webp';
+import meat2 from '../images/products/popular/meat-2.webp';
+import meat3 from '../images/products/popular/meat-3.webp';
+import meat4 from '../images/products/popular/meat-4.webp';
+import meat5 from '../images/products/popular/meat-5.webp';
+import milk1 from '../images/products/popular/milk-1.webp';
+import milk2 from '../images/products/popular/milk-2.webp';
+import milk3 from '../images/products/popular/milk-3.webp';
+import milk4 from '../images/products/popular/milk-4.webp';
+import milk5 from '../images/products/popular/milk-5.webp';
 
 export const ProductsList = [
     {
@@ -23,7 +23,8 @@ export const ProductsList = [
         proteins: 10,
         fats: 42,
         carbohydrates: 0,
-        category: 'meat'
+        category: 'meat',
+        isPopular: true
     },
     {
         id: 2,
@@ -38,7 +39,8 @@ export const ProductsList = [
         proteins: 17,
         fats: 13,
         carbohydrates: 0,
-        category: 'meat'
+        category: 'meat',
+        isPopular: true
     },
     {
         id: 3,
@@ -53,7 +55,8 @@ export const ProductsList = [
         proteins: 9,
         fats: 14,
         carbohydrates: 24,
-        category: 'meat'
+        category: 'meat',
+        isPopular: true
     },
     {
         id: 4,
@@ -68,7 +71,8 @@ export const ProductsList = [
         proteins: 12,
         fats: 35,
         carbohydrates: 0,
-        category: 'meat'
+        category: 'meat',
+        isPopular: true
     },
     {
         id: 5,
@@ -83,7 +87,8 @@ export const ProductsList = [
         proteins: 19,
         fats: 20,
         carbohydrates: 2,
-        category: 'meat'
+        category: 'meat',
+        isPopular: true
     },
     {
         id: 6,
@@ -98,7 +103,8 @@ export const ProductsList = [
         proteins: 3,
         fats: 2.5,
         carbohydrates: 4.7,
-        category: 'milk'
+        category: 'milk',
+        isPopular: true
     },
     {
         id: 7,
@@ -113,7 +119,8 @@ export const ProductsList = [
         proteins: 3.1,
         fats: 3.2,
         carbohydrates: 4.7,
-        category: 'milk'
+        category: 'milk',
+        isPopular: true
     },
     {
         id: 8,
@@ -128,7 +135,8 @@ export const ProductsList = [
         proteins: 3,
         fats: 3.2,
         carbohydrates: 4.7,
-        category: 'milk'
+        category: 'milk',
+        isPopular: true
     },
     {
         id: 9,
@@ -143,7 +151,8 @@ export const ProductsList = [
         proteins: 2.5,
         fats: 3,
         carbohydrates: 4.7,
-        category: 'milk'
+        category: 'milk',
+        isPopular: true
     },
     {
         id: 10,
@@ -158,6 +167,7 @@ export const ProductsList = [
         proteins: 3,
         fats: 1.5,
         carbohydrates: 4.7,
-        category: 'milk'
+        category: 'milk',
+        isPopular: true
     }
 ];
