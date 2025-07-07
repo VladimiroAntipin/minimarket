@@ -1,7 +1,7 @@
 .header {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,12 +19,38 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+@media screen and (max-width: 501px) {
+    .content {
+        width: 95%;
+    }
 }
 
 .wrapper {
     display: flex;
-    justify-content: space-between;
-    width: 20%;
+    align-items: center;
+    gap: 50px;
+}
+
+@media screen and (max-width: 1280px) {
+    .wrapper {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .wrapper {
+        gap: 20px;
+
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .wrapper {
+        gap: 15px;
+    }
 }
 
 .logo {
@@ -32,27 +58,71 @@
     transition: all 0.2s linear;
 }
 
+@media screen and (max-width: 1280px) {
+    .logo {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .logo {
+        width: 60px;
+    }
+}
+
+
 .logo:hover {
     transform: scale(1.1);
     transition: all 0.2s linear;
     cursor: pointer;
 }
 
-.logo > img {
+.logo>img {
     width: 100%;
 }
 
 .searchWrapper {
-    width: 60%;
+    width: 50%;
     display: flex;
     justify-content: center;
+}
+
+@media screen and (max-width: 1280px) {
+    .searchWrapper {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .searchWrapper {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .searchWrapper {
+        width: 10%;
+    }
 }
 
 .buttonsWrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 15%;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+@media screen and (max-width: 960px) {
+    .buttonsWrapper {
+        gap: 16px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .buttonsWrapper {
+        gap: 12px;
+    }
 }
 
 .navContainer {

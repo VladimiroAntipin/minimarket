@@ -1,15 +1,16 @@
 import './App.css';
-import Catalog from './components/Catalog/Catalog';
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
-import Products from './components/Products/Products';
-import Promo from './components/Promo/Promo';
-import Reels from './components/Reels/Reels';
-import AuthModal from './components/AuthModal/AuthModal';
 import { useState } from 'react';
+import Header from './components/Header/Header';
+import { Route, Routes } from 'react-router';
+import Home from './pages/Home/Home';
+import Footer from './components/Footer/Footer';
+
+import AuthModal from './components/AuthModal/AuthModal';
 import Cart from './components/Cart/Cart';
 import Menu from './components/Menu/Menu';
 import ProductModal from './components/ProductModal/ProductModal';
+import Chat from './components/Chat/Chat';
+import DrinksPage from './pages/drinks/Drinks';
 
 function App() {
   const [openAuthModal, setOpenAuthModal] = useState(false);
@@ -44,7 +45,7 @@ function App() {
   }
 
   const handleOpenProductModal = (product) => {
-    setSelectedProduct(product)
+    setSelectedProduct(product);
     setOpenProductModal(true);
   }
 
@@ -74,33 +75,22 @@ function App() {
 
   return (
     <div className="App">
-      <Header
-        onOpenAuthModal={handleOpenAuthModal}
-        onOpenCart={handleOpenCart}
-        onOpenMenu={handleOpenMenu}
-        cartItems={cartItems} />
+      <Header onOpenAuthModal={handleOpenAuthModal} onOpenCart={handleOpenCart} onOpenMenu={handleOpenMenu} cartItems={cartItems} />
       <div className='Container'>
-        <Promo />
-        <Reels />
-        <Catalog />
-        <Products onAddToCart={handleAddToCart} onMoreClick={handleOpenProductModal} />
+
+        <Routes>
+          <Route path='/' element={<Home onAddToCart={handleAddToCart} onMoreClick={handleOpenProductModal} />} />
+            <Route path='/drinks' element={<DrinksPage onAddToCart={handleAddToCart} onMoreClick={handleOpenProductModal}/>} />
+        </Routes>
+
       </div>
+      <Chat />
       <Footer />
+
       {openAuthModal && <AuthModal onClose={handleCloseAuthModal} />}
       {openMenu && <Menu onClose={handleCloseMenu} />}
-      {openCart &&
-        <Cart
-          onClose={handleCloseCart}
-          cartItems={cartItems}
-          onClearCart={handleClearCart}
-          handleUpdateCart={handleUpdateCart}
-        />}
-      {openProductModal && selectedProduct &&
-        <ProductModal
-          product={selectedProduct}
-          onClose={handleCloseProductModal}
-          onAddToCart={() => handleAddToCart(selectedProduct)}
-        />}
+      {openCart && <Cart onClose={handleCloseCart} cartItems={cartItems} onClearCart={handleClearCart} handleUpdateCart={handleUpdateCart} />}
+      {openProductModal && selectedProduct && <ProductModal product={selectedProduct} onClose={handleCloseProductModal} onAddToCart={() => handleAddToCart(selectedProduct)} />}
     </div>
   );
 }

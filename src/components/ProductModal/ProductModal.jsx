@@ -1,7 +1,7 @@
 import Modal from '../Modal/Modal';
 import styles from './styles.module.css';
 
-const ProductModal = ({ product, onClose, onAddToCart }) => {
+const ProductModal = ({product, onClose, onAddToCart}) => {
     const handleCloseProductModal = () => {
         onClose();
     }
@@ -30,7 +30,7 @@ const ProductModal = ({ product, onClose, onAddToCart }) => {
                 <h3 className={styles.productDescriptionTitle}>Описание</h3>
                 <p className={styles.productDescription}>{product.description}</p>
 
-
+                
                 <h3 className={styles.tableTitle}>Пищевая ценность в 100г</h3>
                 <div className={styles.table}>
                     <div className={styles.tableValue}>

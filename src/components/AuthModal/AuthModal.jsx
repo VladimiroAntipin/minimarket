@@ -44,19 +44,18 @@ const AuthModal = ({ onClose }) => {
         ),
         SUCCESS: (
             <Modal onClose={handleCloseAuthModal}>
-                {( handleCloseModal ) => (
-                <div className={styles.authModal}>
-                    <div className={styles.tickImage}>
-                        <img src={tick} alt="success" />
+                {(handleCloseModal) => (
+                    <div className={styles.authModal}>
+                        <div className={styles.tickImage}>
+                            <img src={tick} alt="success" />
+                        </div>
+                        <h2 className={styles.successText}>Вы успешно авторизировались!</h2>
+                        <button className={styles.button} onClick={handleCloseModal}>К покупкам</button>
                     </div>
-                    <h2 className={styles.successText}>Вы успешно авторизировались!</h2>
-                    <button className={styles.button} onClick={handleCloseModal}>К покупкам</button>
-                </div>
                 )}
             </Modal>
         )
     }
-
 
     return (
         <>

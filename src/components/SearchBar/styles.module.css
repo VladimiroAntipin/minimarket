@@ -10,6 +10,35 @@
     padding-right: 10px;
 }
 
+@media screen and (max-width: 1280px) {
+    .searchBar {
+        height: 52px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .searchBar {
+        position: absolute;
+        right: 130px;
+        top: 0px;
+        padding-left: 10px;
+        border: transparent;
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .searchBar {
+        right: 120px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .searchBar {
+        top: -5px;
+    }
+}
+
 .searchBar:hover {
     cursor: pointer;
 }
@@ -29,6 +58,36 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 1280px) {
+    .input {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .input {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .input {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .input {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .input {
+        width: 0px;
+    }
+}
+
 .icon {
     width: 50px;
     height: 50px;
@@ -40,6 +99,20 @@
     transition: all 0.2s linear;
 }
 
-.icon > img {
+@media screen and (max-width: 1280px) {
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 514px) {
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.icon>img {
     width: 40%;
 }

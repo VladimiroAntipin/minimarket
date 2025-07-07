@@ -4,9 +4,6 @@ import vk from '../../images/social/vk.png';
 import telegram from '../../images/social/telegram.jpg';
 import youtube from '../../images/social/youtube.png';
 import ok from '../../images/social/Odnoklassniki.png';
-import appStore from '../../images/apps/appstore.png';
-import googlePlay from '../../images/apps/googlePlay.png';
-import rustore from '../../images/apps/rustore.png';
 
 const Footer = () => {
     return (
@@ -37,11 +34,10 @@ const Footer = () => {
                     <h3 className={styles.title}>О компании</h3>
                     <a className={styles.link} href='/'>О нас</a>
                     <a className={styles.link} href='/'>Магазин</a>
-                    <a className={styles.link} href='/'>Контакты</a>
                 </div>
 
                 <div className={styles.links}>
-                    <h3 className={styles.title}>Обратная связь</h3>
+                    <h3 className={styles.title}>Контакты</h3>
                     <a className={styles.link} href='/'>+7 999 123-45-67</a>
                     <a className={styles.link} href='/'>contacts@minimarket.ru</a>
                     <div className={styles.social}>
@@ -61,23 +57,9 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className={styles.apps}>
-                <h3 className={styles.title}>Скачайте мобильное приложение</h3>
-                <div className={styles.icons}>
-                    <div className={styles.app}>
-                        <img src={appStore} alt="iOS" />
-                    </div>
-                    <div className={styles.app}>
-                        <img src={googlePlay} alt="Android" />
-                    </div>
-                    <div className={styles.app}>
-                        <img src={rustore} alt="rustore" />
-                    </div>
-                </div>
-            </div>
-
             <div className={styles.divider}></div>
-            <div className={styles.copyright}>2025 © АО "Минимаркет"</div>
+
+            <div className={styles.copyright}>2025 © "Минимаркет"</div>
         </div>
     );
 }
